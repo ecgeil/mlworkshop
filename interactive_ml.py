@@ -110,7 +110,7 @@ class InteractiveML:
             pred = model.predict(feature).reshape((ngrid, ngrid))
         extent = (0, 1, 0, 1)
         ax.imshow(pred, extent=extent, vmin = 0, vmax = 1,origin='lower',
-           aspect='auto', cmap='cool')
+            aspect='auto', cmap='cool')
 
 if __name__ == '__main__':
     #add your models here
