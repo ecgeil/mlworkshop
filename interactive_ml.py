@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
 
 
 class InteractiveML:
