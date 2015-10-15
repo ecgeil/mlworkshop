@@ -114,6 +114,7 @@ class InteractiveML:
            aspect='auto', cmap='cool')
 
 if __name__ == '__main__':
+    #add your models here
     models = (("Logistic Regression", LogisticRegression(C = 1e3, penalty = 'l2')),
               ("Linear SVM", svm.SVC(kernel='linear', C=1e3)),
               ("Kernel SVM (polynomial)", svm.SVC(kernel='poly', C=1e6)),
