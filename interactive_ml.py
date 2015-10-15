@@ -1,3 +1,7 @@
+"""
+Interactively add points, fit a classifier, and plot the results.
+"""
+
 import sys
 import time
 import numpy as np
