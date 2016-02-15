@@ -91,7 +91,7 @@ class InteractiveML:
         ax = self.ax
         ax.cla()
         name, model = self.models[self.cur_model]
-        if np.unique(self.y).size > 1:
+        if np.unique(self.y).size > 1 and self.cur_model > 0:
             self.plot_fit(ax, model, self.x, self.y, prob=self.plot_prob)
         ax.scatter(np.append(self.x[:,0], -1),
             np.append(self.x[:,1], -1), 
@@ -118,7 +118,9 @@ class InteractiveML:
 
 if __name__ == '__main__':
     #add your models here
-    models = (("Logistic Regression", LogisticRegression(C = 1e3, penalty = 'l2')),
+    models = (("No model", None),
+              ("Logistic Regression", LogisticRegression(C = 1e6, penalty = 'l2')),
+              ("Logistic Regression (L1)", LogisticRegression(C = 1e6, penalty = 'l1')),
               ("Linear SVM", svm.SVC(kernel='linear', C=1e3)),
               ("Kernel SVM (polynomial)", svm.SVC(kernel='poly', C=1e6)),
               ("Kernel SVM (RBF)", svm.SVC(kernel='rbf', C=1e6)),
